@@ -7,8 +7,17 @@ function randomNumber(userGuess, computersNumber) {
 
     // YOUR CODE BELOW
 
+    if (userGuess < 1 || userGuess > 100) {
+        return "Please input a number between 1 and 100";
+    }
 
-
+    if (userGuess > computersNumber) {
+        return `Lower\nGuesses: ${guessNumber}`;
+    } else if (userGuess < computersNumber) {
+        return `Higher\nGuesses: ${guessNumber}`;
+    } else {
+        return `The number was ${computersNumber}!\nGuesses: ${guessNumber}`;
+    }
 
     // YOUR CODE ABOVE
 };
