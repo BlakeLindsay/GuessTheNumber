@@ -4,25 +4,22 @@
 */
 
 function randomNumber(userGuess, computersNumber) {
+	// YOUR CODE BELOW
 
-    // YOUR CODE BELOW
+	if (userGuess < 1 || userGuess > 100) {
+		return "Please input a number between 1 and 100";
+	}
 
-    if (userGuess < 1 || userGuess > 100) {
-        return "Please input a number between 1 and 100";
-    }
+	if (userGuess > computersNumber) {
+		return `Lower\nGuesses: ${guessNumber}`;
+	} else if (userGuess < computersNumber) {
+		return `Higher\nGuesses: ${guessNumber}`;
+	} else {
+		return `The number was ${computersNumber}!\nGuesses: ${guessNumber}`;
+	}
 
-    if (userGuess > computersNumber) {
-        return `Lower\nGuesses: ${guessNumber}`;
-    } else if (userGuess < computersNumber) {
-        return `Higher\nGuesses: ${guessNumber}`;
-    } else {
-        return `The number was ${computersNumber}!\nGuesses: ${guessNumber}`;
-    }
-
-    // YOUR CODE ABOVE
-};
-
-
+	// YOUR CODE ABOVE
+}
 
 //* Have the Computer Guess your Number ---------------------------------------------
 /* 
@@ -38,21 +35,18 @@ function randomNumber(userGuess, computersNumber) {
 
     You are not limited to just these functions. Feel free to create a new function that may be called to help manage the flow of your code.
 */
+let currentNumber = 1;
 
 function startCompGuess(num) {
-    // This should return a string that denotes the first guessed number
-
-    // YOUR CODE ...
-
-
+	// This should return a string that denotes the first guessed number
+	// YOUR CODE ...
+	return `Is your number ${currentNumber}?`
 }
 
 function compGuess(reply) {
-    /* 
+	/* 
     *   The parameter "reply" will either be passing "lower", "correct", or "higher". This should be considered when evaluating th elogic and response.
 
     This should return a string indicating the computers response.
     */
-
 }
-
