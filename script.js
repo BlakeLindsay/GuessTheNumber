@@ -50,3 +50,8 @@ function compGuess(reply) {
     This should return a string indicating the computers response.
     */
 }
+
+let createGuess = () => {
+	currentNumber = Math.floor(Math.random() * 100) + 1;
+	return currentNumber;
+};
