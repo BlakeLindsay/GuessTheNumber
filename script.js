@@ -36,6 +36,8 @@ function randomNumber(userGuess, computersNumber) {
     You are not limited to just these functions. Feel free to create a new function that may be called to help manage the flow of your code.
 */
 let currentNumber = 1;
+let highest;
+let lowest;
 
 function startCompGuess(num) {
 	// This should return a string that denotes the first guessed number
@@ -51,15 +53,17 @@ function compGuess(reply) {
     */
 	switch (reply) {
 		case "lower":
+			lowest = currentValue;
 			return `Your number is lower? Is it ${currentNumber}?`;
 		case "higher":
+			highest = currentValue;
 			return `Your number is higher? Is it ${currentNumber}?`;
 		default:
 			return `I knew it was ${currentNumber}!`;
 	}
 }
 
-let createGuess = () => {
+let createGuess = (limit) => {
 	currentNumber = Math.floor(Math.random() * 100) + 1;
 	return currentNumber;
 };
